@@ -4,6 +4,7 @@ package com.orangehrm.base;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -14,10 +15,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import com.orangehrm.actiondriver.ActionDriver;
+import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
 
 public class BaseClass {
@@ -33,14 +35,24 @@ public class BaseClass {
 		configBrowser();
 	}
 	
+	@BeforeMethod
+	public void startExtent(Method method) {
+	    ExtentManager.startTest(method.getName());
+	}
+
+	
 	@BeforeSuite
 	public void loadConfig() throws IOException {
 		// load config.properties file
 		prop = new Properties();
 
 		FileInputStream fis = new FileInputStream(
-				"E:\\code_base\\myCode\\Java\\.metadata\\java.selenium\\src\\main\\resources\\config.properties");
+				"E:\\code_base\\myCode\\Java\\java.selenium\\src\\main\\resources\\config.properties");
 		prop.load(fis);
+		log.info("config.properties loaded");
+		
+		// start the extent reporter too
+		ExtentManager.getReporter();
 	}
 
 	private void launchBrowser() {
@@ -50,8 +62,10 @@ public class BaseClass {
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver(); // selenium manager - new feature of selenium - automatically download
 											// configure and enstanciate driver
+			ExtentManager.registerDriver(driver);
 		} else if (browser.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
+			ExtentManager.registerDriver(driver);
 		} else {
 			log.error("Browser not correct");
 			throw new IllegalArgumentException("Browser not supported: " + browser);
@@ -85,6 +99,12 @@ public class BaseClass {
 		log.info("WebDriver instance closed.");
 		driver=null;
 	}
+	
+	@AfterSuite
+	public void flushReport() {
+		ExtentManager.endTest();
+	}
+
 	
 	// getter method for webdriver
 	public static WebDriver getDriver() {

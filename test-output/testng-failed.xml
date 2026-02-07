@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="classes" name="Failed suite [OrangeHRM suite]">
-  <test thread-count="3" parallel="classes" name="Regression test(failed)">
+<suite name="Failed suite [OrangeHRM suite]">
+  <test thread-count="5" name="Smoke test(failed)">
     <classes>
       <class name="com.orangehrm.test.LoginPageTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="loadConfig"/>
-          <include name="test002_invalidCredentials"/>
+          <include name="startExtent"/>
+          <include name="flushReport"/>
           <include name="setupPages"/>
+          <include name="test001_verfiyValidLogin"/>
+        </methods>
+      </class> <!-- com.orangehrm.test.LoginPageTest -->
+    </classes>
+  </test> <!-- Smoke test(failed) -->
+  <test thread-count="5" name="Regression test(failed)">
+    <classes>
+      <class name="com.orangehrm.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="startExtent"/>
+          <include name="flushReport"/>
+          <include name="setupPages"/>
+          <include name="test001_verfiyValidLogin"/>
         </methods>
       </class> <!-- com.orangehrm.test.LoginPageTest -->
     </classes>

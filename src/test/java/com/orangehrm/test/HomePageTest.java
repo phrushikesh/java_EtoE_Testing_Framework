@@ -8,6 +8,7 @@ import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.base.BaseClass;
 import com.orangehrm.pages.HomePage;
 import com.orangehrm.pages.LoginPage;
+import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
 
 public class HomePageTest extends BaseClass {
@@ -27,6 +28,7 @@ public class HomePageTest extends BaseClass {
 	public void verifyOrangeHRMLogo() {
 		// perform login
 		log.info("TestCase001: verifyOrangeHRMLogo   ");
+		ExtentManager.log("Performing login operation.");
 		log.info("Performing login operation.");
 		loginPage.login("Admin", "admin123");
 		

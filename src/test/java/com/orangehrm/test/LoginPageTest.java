@@ -8,6 +8,7 @@ import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.base.BaseClass;
 import com.orangehrm.pages.HomePage;
 import com.orangehrm.pages.LoginPage;
+import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
 
 public class LoginPageTest extends BaseClass {
@@ -23,11 +24,12 @@ public class LoginPageTest extends BaseClass {
 		this.homePage = new HomePage(getDriver());
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void test001_verfiyValidLogin() {
 		log.info("TestCase002: Verify valid credentials login");
 		// perform login
 		log.info("Performing login action using valid credentials");
+		ExtentManager.log("Performing login action using valid credentials");
 		loginPage.login("Admin", "admin123");
 		
 		// step 7: verify ADMIN tab on home page

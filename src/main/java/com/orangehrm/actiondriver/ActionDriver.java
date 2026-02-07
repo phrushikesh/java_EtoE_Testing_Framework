@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.orangehrm.base.BaseClass;
+import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
 
 public abstract class ActionDriver {
@@ -67,7 +68,9 @@ public abstract class ActionDriver {
 		String desc = getElementDescription(by);
 		try {
 			waitUntilElementClickable(by);
+			ExtentManager.logStepWithScreenshot(driver, desc, "Screenshot captured");
 			driver.findElement(by).click();
+			ExtentManager.log("Clicked on element: " + desc);
 			log.info("Clicked on: " + desc);
 		} catch (Exception e) {
 			log.error("Unable to click element, error: " + e.getMessage());
@@ -81,8 +84,11 @@ public abstract class ActionDriver {
 			WebElement ele = driver.findElement(elementLocator);
 			ele.clear();
 			ele.sendKeys(text);
+			ExtentManager.logStepWithScreenshot(driver, desc, "Screenshot captured");
+			ExtentManager.log("Entered text in element: " + desc);
 			log.info("Entered text on " + desc + ": " + text);
 		} catch (Exception e) {
+			ExtentManager.logStepWithScreenshot(driver, "Enter text", "Failed to enter text into element");
 			log.error("Unable to enter text, error: " + e.getMessage());
 		}
 	}
