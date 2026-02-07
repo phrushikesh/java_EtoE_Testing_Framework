@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+
+    <Properties>
+        <!-- Console: Single line + colored level -->
+        <Property name="CONSOLE_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level} [%t] %style{%c{1}}{cyan}:%L - %msg %ex{short}%n</Property>
+
+        <!-- File: Single line + full stacktrace -->
+        <Property name="FILE_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %c{1}.%M:%L - %msg%n%throwable</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- ===== Colored Console Appender ===== -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${CONSOLE_PATTERN}"/>
+        </Console>
+
+        <!-- ===== Application Log (INFO & above) ===== -->
+        <RollingFile name="AppFile"
+                     fileName="logs/app/app.log"
+                     filePattern="logs/app/archive/app-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+
+        <!-- ===== Debug Log Only ===== -->
+        <RollingFile name="DebugFile"
+                     fileName="logs/debug/debug.log"
+                     filePattern="logs/debug/archive/debug-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+
+            <Filters>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="15"/>
+        </RollingFile>
+
+        <!-- ===== Error Log Only ===== -->
+        <RollingFile name="ErrorFile"
+                     fileName="logs/error/error.log"
+                     filePattern="logs/error/archive/error-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="50"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Your Framework Package -->
+        <Logger name="org.orangehrm" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="AppFile"/>
+            <AppenderRef ref="DebugFile"/>
+            <AppenderRef ref="ErrorFile"/>
+        </Logger>
+
+        <!-- Root Logger -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="AppFile"/>
+            <AppenderRef ref="ErrorFile"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

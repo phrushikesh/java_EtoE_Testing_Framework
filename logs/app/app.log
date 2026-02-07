@@ -1,0 +1,186 @@
+2026-02-07 16:50:17.369 
+            INFO  
+            [main] 
+            BaseClass.setup:30 - 
+            Setup for LoginPageTest started.
+2026-02-07 16:50:17.374 
+            INFO  
+            [main] 
+            BaseClass.setup:31 - 
+            Setting up webdriver for: LoginPageTest
+2026-02-07 16:50:31.374 
+            INFO  
+            [main] 
+            ActionDriver.<init>:26 - 
+            Constructor of action driver class
+2026-02-07 16:50:31.377 
+            INFO  
+            [main] 
+            ActionDriver.<init>:26 - 
+            Constructor of action driver class
+2026-02-07 16:50:32.639 
+            INFO  
+            [main] 
+            ActionDriver.enterText:84 - 
+            Entered text on Element with name: username: admin
+2026-02-07 16:50:32.852 
+            INFO  
+            [main] 
+            ActionDriver.enterText:84 - 
+            Entered text on Element with name: password: admin
+2026-02-07 16:50:34.423 
+            INFO  
+            [main] 
+            ActionDriver.click:71 - 
+            Clicked on: Element with text: Login
+2026-02-07 16:50:34.988 
+            INFO  
+            [main] 
+            ActionDriver.isDisplayed:121 - 
+            Displayed on DOM: Element with text: Invalid credentials
+2026-02-07 16:50:35.006 
+            INFO  
+            [main] 
+            BaseClass.test002_invalidCredentials:47 - 
+            Error message displayed
+2026-02-07 16:50:35.055 
+            INFO  
+            [main] 
+            ActionDriver.waitForPageLoad:58 - 
+            Page loaded successfully.
+2026-02-07 16:50:35.429 
+            INFO  
+            [main] 
+            BaseClass.tearDown:85 - 
+            WebDriver instance closed.
+2026-02-07 16:50:35.476 
+            INFO  
+            [main] 
+            BaseClass.setup:30 - 
+            Setup for LoginPageTest started.
+2026-02-07 16:50:35.478 
+            INFO  
+            [main] 
+            BaseClass.setup:31 - 
+            Setting up webdriver for: LoginPageTest
+2026-02-07 16:50:47.555 
+            INFO  
+            [main] 
+            ActionDriver.<init>:26 - 
+            Constructor of action driver class
+2026-02-07 16:50:47.556 
+            INFO  
+            [main] 
+            ActionDriver.<init>:26 - 
+            Constructor of action driver class
+2026-02-07 16:50:48.634 
+            INFO  
+            [main] 
+            ActionDriver.enterText:84 - 
+            Entered text on Element with name: username: admin
+2026-02-07 16:50:48.827 
+            INFO  
+            [main] 
+            ActionDriver.enterText:84 - 
+            Entered text on Element with name: password: admin
+2026-02-07 16:50:48.997 
+            INFO  
+            [main] 
+            ActionDriver.click:71 - 
+            Clicked on: Element with text: Login
+2026-02-07 16:50:51.281 
+            INFO  
+            [main] 
+            ActionDriver.isDisplayed:121 - 
+            Displayed on DOM: Element with text: Invalid credentials
+2026-02-07 16:50:51.300 
+            INFO  
+            [main] 
+            BaseClass.test002_invalidCredentials:47 - 
+            Error message displayed
+2026-02-07 16:50:51.343 
+            INFO  
+            [main] 
+            ActionDriver.waitForPageLoad:58 - 
+            Page loaded successfully.
+2026-02-07 16:50:51.597 
+            INFO  
+            [main] 
+            BaseClass.tearDown:85 - 
+            WebDriver instance closed.
+2026-02-07 16:50:51.600 
+            INFO  
+            [main] 
+            BaseClass.setup:30 - 
+            Setup for HomePageTest started.
+2026-02-07 16:50:51.600 
+            INFO  
+            [main] 
+            BaseClass.setup:31 - 
+            Setting up webdriver for: HomePageTest
+2026-02-07 16:51:01.277 
+            INFO  
+            [main] 
+            ActionDriver.<init>:26 - 
+            Constructor of action driver class
+2026-02-07 16:51:01.279 
+            INFO  
+            [main] 
+            ActionDriver.<init>:26 - 
+            Constructor of action driver class
+2026-02-07 16:51:02.457 
+            INFO  
+            [main] 
+            ActionDriver.enterText:84 - 
+            Entered text on Element with name: username: Admin
+2026-02-07 16:51:02.701 
+            INFO  
+            [main] 
+            ActionDriver.enterText:84 - 
+            Entered text on Element with name: password: admin123
+2026-02-07 16:51:02.900 
+            INFO  
+            [main] 
+            ActionDriver.click:71 - 
+            Clicked on: Element with text: Login
+2026-02-07 16:51:05.221 
+            INFO  
+            [main] 
+            ActionDriver.isDisplayed:121 - 
+            Displayed on DOM: Element with class name: oxd-brand-banner
+2026-02-07 16:51:05.569 
+            INFO  
+            [main] 
+            BaseClass.tearDown:85 - 
+            WebDriver instance closed.
+2026-02-07 16:52:01.442 INFO  [main] BaseClass.setup:30 - Setup for LoginPageTest started.
+2026-02-07 16:52:01.447 INFO  [main] BaseClass.setup:31 - Setting up webdriver for: LoginPageTest
+2026-02-07 16:52:16.906 INFO  [main] ActionDriver.<init>:26 - Constructor of action driver class
+2026-02-07 16:52:16.910 INFO  [main] ActionDriver.<init>:26 - Constructor of action driver class
+2026-02-07 16:52:18.010 INFO  [main] ActionDriver.enterText:84 - Entered text on Element with name: username: admin
+2026-02-07 16:52:18.204 INFO  [main] ActionDriver.enterText:84 - Entered text on Element with name: password: admin
+2026-02-07 16:52:18.343 INFO  [main] ActionDriver.click:71 - Clicked on: Element with text: Login
+2026-02-07 16:52:20.513 INFO  [main] ActionDriver.isDisplayed:121 - Displayed on DOM: Element with text: Invalid credentials
+2026-02-07 16:52:20.537 INFO  [main] BaseClass.test002_invalidCredentials:47 - Error message displayed
+2026-02-07 16:52:20.585 INFO  [main] ActionDriver.waitForPageLoad:58 - Page loaded successfully.
+2026-02-07 16:52:20.880 INFO  [main] BaseClass.tearDown:85 - WebDriver instance closed.
+2026-02-07 16:52:20.925 INFO  [main] BaseClass.setup:30 - Setup for LoginPageTest started.
+2026-02-07 16:52:20.926 INFO  [main] BaseClass.setup:31 - Setting up webdriver for: LoginPageTest
+2026-02-07 16:52:32.757 INFO  [main] ActionDriver.<init>:26 - Constructor of action driver class
+2026-02-07 16:52:32.759 INFO  [main] ActionDriver.<init>:26 - Constructor of action driver class
+2026-02-07 16:52:34.735 INFO  [main] ActionDriver.enterText:84 - Entered text on Element with name: username: admin
+2026-02-07 16:52:34.890 INFO  [main] ActionDriver.enterText:84 - Entered text on Element with name: password: admin
+2026-02-07 16:52:35.051 INFO  [main] ActionDriver.click:71 - Clicked on: Element with text: Login
+2026-02-07 16:52:38.268 INFO  [main] ActionDriver.isDisplayed:121 - Displayed on DOM: Element with text: Invalid credentials
+2026-02-07 16:52:38.292 INFO  [main] BaseClass.test002_invalidCredentials:47 - Error message displayed
+2026-02-07 16:52:38.350 INFO  [main] ActionDriver.waitForPageLoad:58 - Page loaded successfully.
+2026-02-07 16:52:39.543 INFO  [main] BaseClass.tearDown:85 - WebDriver instance closed.
+2026-02-07 16:52:39.546 INFO  [main] BaseClass.setup:30 - Setup for HomePageTest started.
+2026-02-07 16:52:39.546 INFO  [main] BaseClass.setup:31 - Setting up webdriver for: HomePageTest
+2026-02-07 16:52:56.033 INFO  [main] ActionDriver.<init>:26 - Constructor of action driver class
+2026-02-07 16:52:56.034 INFO  [main] ActionDriver.<init>:26 - Constructor of action driver class
+2026-02-07 16:52:58.402 INFO  [main] ActionDriver.enterText:84 - Entered text on Element with name: username: Admin
+2026-02-07 16:52:58.545 INFO  [main] ActionDriver.enterText:84 - Entered text on Element with name: password: admin123
+2026-02-07 16:52:58.671 INFO  [main] ActionDriver.click:71 - Clicked on: Element with text: Login
+2026-02-07 16:53:02.150 INFO  [main] ActionDriver.isDisplayed:121 - Displayed on DOM: Element with class name: oxd-brand-banner
+2026-02-07 16:53:02.487 INFO  [main] BaseClass.tearDown:85 - WebDriver instance closed.
